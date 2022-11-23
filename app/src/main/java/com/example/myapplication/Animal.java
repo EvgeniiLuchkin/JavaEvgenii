@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.mainactivity;
 
 import android.util.Log;
 

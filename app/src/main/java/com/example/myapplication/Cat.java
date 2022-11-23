@@ -1,9 +1,9 @@
-package com.example.myapplication;
+package com.example.mainactivity;
 
 import android.util.Log;
 
-public class Cat {
-    int age;
+public class Cat extends  Animal {
+    protected int age;
     String name;
     String breed;
     String color;
