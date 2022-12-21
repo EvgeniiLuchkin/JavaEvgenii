@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+
 import android.util.Log;
 
 public class Animal {
@@ -13,4 +14,3 @@ public class Animal {
         return "I can breathe";
     }
 }
-
