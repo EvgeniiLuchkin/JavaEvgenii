@@ -3,7 +3,8 @@ import android.util.Log;
 
 import java.util.Locale;
 
-public abstract class Cat extends Animal{
+public abstract class Cat extends Animal
+{
     int age;
     String name;
     final static int numberOfLegs= 4;
@@ -17,43 +18,33 @@ public abstract class Cat extends Animal{
     {
         boolean moreThan100;
 
-        CountResetter()
-        {
+        CountResetter(){
             if(Cat.count > 5)
             {
                     moreThan100 = true;
             }
-
-            if(moreThan100)
-
-            {
+                if(moreThan100){
                     resetCounter(0);
             }
         }
-
         void resetCounter(int value)
-
         {
                 Cat.count = value;
         }
 
     }
 
-    class CatMood
-    {
+    class CatMood{
         int levelOfMood;
 
         CatMood()
         {
-            if(Cat.this.age < 2)
-            {
-                levelOfMood = 100;
-            }
-            else if(Cat.this.age >= 2 && Cat.this.age < 7)
+                if(Cat.this.age < 2){
+                    levelOfMood = 100;
+            }else if(Cat.this.age >= 2 && Cat.this.age < 7)
             {
                     levelOfMood = 50;
-            }
-            else if (Cat.this.age >= 7)
+            }else if (Cat.this.age >= 7)
             {
                     levelOfMood = 20;
             }
@@ -61,8 +52,7 @@ public abstract class Cat extends Animal{
     }
     private String color;
     private String breed;
-    public Cat()
-    {
+    public Cat()  {
 
         catMood = new CatMood();
 
@@ -90,11 +80,11 @@ public abstract class Cat extends Animal{
 
 
     }
-        public Cat(int age, String name)
+    public Cat(int age, String name)
     {
-            this.age = age;
-            this.name = name;
-            catMood = new CatMood();
+        this.age = age;
+        this.name = name;
+        catMood = new CatMood();
 
         switch (catMood.levelOfMood)
         {
@@ -114,33 +104,32 @@ public abstract class Cat extends Animal{
 
     public void talk()
     {
-            Log.i("talk()",  helloText);
+        Log.i("talk()",  helloText);
     }
-        public void talk(int age)
+    public void talk(int age)
     {
-         Log.i("talk()", "Meow! i`m " + age + " years old.");
+        Log.i("talk()", "Meow! i`m " + age + " years old.");
     }
 
-        public void talk(String hello){ Log.i("talk()", "Meow! " + hello);
+    public void talk(String hello){ Log.i("talk()", "Meow! " + hello);
     }
-        public static String whatCatsLike()
+    public static String whatCatsLike()
     {
-            return "i like playing, jumping and sometimes scratching";
+        return "i like playing, jumping and sometimes scratching";
     }
 
 
 
     public void catchMouse(int mouseWeight)
     {
-        class Mouse
-        {
+        class Mouse{
             String color;
             int weight;
 
             public Mouse(String color, int weight)
             {
-                    this.color = color;
-                    this.weight = weight;
+                this.color = color;
+                this.weight = weight;
             }
 
             String mouseVoice()
@@ -152,12 +141,14 @@ public abstract class Cat extends Animal{
 
         if(mouse.weight < 1)
         {
-                Log.i("cat say ", "I will eat you!" + mouse.mouseVoice());
+                 Log.i("cat say ", "I will eat you!" + mouse.mouseVoice());
         }else
         {
-                Log.i("cat say ", "I afraid you!");
+
+            Log.i("cat say ", "I afraid you!");
+
         }
+
     }
 
 }
-
