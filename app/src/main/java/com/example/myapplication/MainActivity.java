@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     //protected
     //public
 
+
     Cat myCat;
     int z;
 
