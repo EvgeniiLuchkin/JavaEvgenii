@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.*;
@@ -9,7 +10,7 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements Printable{
 
     //private
     //package access
@@ -26,6 +27,26 @@ public class MainActivity extends AppCompatActivity {
 
         Cat cat = new Lion();
         cat.talk();
+
+        Printable printable = new Puma();
+        printable.print();
+        ((Puma) printable).move();
+
+        printAnyObject(new MainActivity());
+
+
     }
 
+    void printAnyObject(Printable printable){
+
+    }
+
+    void printAnyObject(Puma puma){
+
+    }
+
+    @Override
+    public void print() {
+
+    }
 }
